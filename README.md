@@ -63,27 +63,28 @@ python .claude/skills/video-summary/scripts/video_summary.py "<视频路径或UR
 
 ## 配置
 
-### Bilibili Cookies（可选）
+### Cookies（可选，用于 YouTube、Bilibili 等平台）
 
-如需下载 Bilibili 字幕，需配置 cookies：
+不推荐cookies登录YouTube！
+如需下载会员内容或受限字幕，需配置 cookies：
 
-1. 使用浏览器插件导出 bilibili.com 的 cookies（Netscape 格式）
-2. 保存为项目根目录的 `bilibili_cookies.txt`
+1. 使用浏览器插件导出对应网站的 cookies（Netscape 格式）
+2. 保存为项目根目录的 `cookies.txt`
 3. 或设置环境变量指定路径：
 
 ```bash
 # Windows
-set BILIBILI_COOKIES_FILE=D:\path\to\cookies.txt
+set COOKIES_FILE=D:\path\to\cookies.txt
 
 # Linux/Mac
-export BILIBILI_COOKIES_FILE=/path/to/cookies.txt
+export COOKIES_FILE=/path/to/cookies.txt
 ```
 
 ### 环境变量
 
 | 变量名 | 说明 | 默认值 |
 |--------|------|--------|
-| `BILIBILI_COOKIES_FILE` | Bilibili cookies 文件路径 | `{项目根目录}/bilibili_cookies.txt` |
+| `COOKIES_FILE` | Cookies 文件路径（支持 YouTube、Bilibili 等） | `{项目根目录}/cookies.txt` |
 | `FFMPEG_BIN` | ffmpeg bin 目录路径 | `{项目根目录}/ffmpeg-8.1-essentials_build/bin` |
 
 ## 工作流程
